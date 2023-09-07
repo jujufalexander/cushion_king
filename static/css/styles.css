@@ -1,0 +1,154 @@
+/* Keyframes for the gradient animation */
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    .overlay-button {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-radius: 20px; 
+    margin-right: 10px; 
+    display: inline-block;
+    background: linear-gradient(to right, #8e43f0, #00c4cc);
+    background-size: 200% auto;
+    color: white;
+    font-family: Raleway-Regular;
+    font-size: 24px;
+    padding: 10px 20px;
+    text-decoration: none;
+    animation: gradient-animation 3s infinite;
+    margin-bottom: -10.75px;
+}
+}
+
+body {
+    background-color: white; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.banner {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.headline {
+    text-align: center; 
+    font-size: 24px; 
+    margin: 20px 0; 
+}
+
+/* Center the image horizontally and vertically */
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the image as needed */
+.img-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.shape-container {
+    background-color: #f0eeef; 
+    padding: 40px 0; 
+    position: relative; 
+}
+
+/* Center the button within the container */
+.image-button-container {
+    position: relative;
+    text-align: center; 
+}
+
+.overlay-button {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-radius: 20px; 
+    margin-right: 10px; 
+    display: inline-block;
+    background: linear-gradient(to right, #8e43f0, #00c4cc);
+    background-size: 200% auto;
+    color: white;
+    font-family: Raleway-Regular;
+    font-size: 24px;
+    padding: 10px 20px;
+    text-decoration: none;
+    animation: gradient-animation 3s infinite;
+}
+
+/* Position the button container to the top right of the banner */
+.button-container {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+}
+
+/* Style the bid box with a gradient background */
+.bid-box {
+    width: 200px; 
+    height: 100px; 
+    background: linear-gradient(to right, #e81c0c, #8e43f0); 
+    background-size: 200% auto; 
+    border-radius: 10px; 
+    margin: 0 auto; 
+    text-align: center; 
+    line-height: 100px; 
+    font-size: 24px; 
+    margin-top: 20px; 
+    color: white; 
+    animation: gradient-animation 3s infinite;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar {
+    background-color: #efede8; 
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    font-size: 18px;
+    color: #333; 
+  }
+  
+  /* Style the hamburger menu icon */
+  .navbar-toggler-icon {
+    background-color: #333; 
+  }
+
+/* Push the collapsed menu (hamburger menu) to the left */
+.navbar-toggler {
+    order: -1; 
+}
+
+
+
+

@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cushion Kings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@metamask/detect-provider"></script>
+</head>
+<body>
+     
+<!-- Navigation menu using Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <!-- Brand/logo -->
+      <a class="navbar-brand" href="#">Cushion Kings</a>
+  
+      <!-- Hamburger menu button for small screens -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navigation links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto"> <!-- Use 'ml-auto' to push the links to the right -->
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="popover" data-placement="top" data-content="Use these test credentials to login: Username: giovanni - Password: LetsCode123!">Sign Up</a>
+            </li>     
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}" id="loginDropdown">Log In</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <header>
+        <img src="{% static 'img/ck_banner.png' %}" alt="Cushion Kings Banner" class="banner">
+        <div style="padding: 7.5px;"></div> 
+    </header>
+    
+ <h2 class="text-center">The greatest online auction on this side of the Metaverse!</h2>
+
+ <div style="padding: 15px;"></div>
+ 
+ <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3" style="background-color: #efede8;">
+                <div class="card-body text-center">
+                    <i class="fa-solid fa-couch" style="font-size: 24px;"></i>
+                    <div style="padding: 15px;"></div>
+                    <h5 class="card-title">Welcome to Cushion Kings</h5>
+                    <ul class="list-unstyled text-center">
+                        <li>&#8226; Visit the Sign-Up tab at the top of the page.</li>
+                        <li>&#8226; Use the provided credentials to log in.</li>
+                        <li>&#8226; Test out our PostgreSQL database integration.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3" style="background-color: #efede8;">
+                <div class="card-body text-center">
+                    <i class="fa-solid fa-couch" style="font-size: 24px;"></i>
+                    <div style="padding: 15px;"></div>
+                    <h5 class="card-title">Web3 Integration</h5>
+                    <ul class="list-unstyled text-center">
+                        <li>&#8226; Click "Let's bid!" to trigger Metamask connection.</li>
+                        <li>&#8226; Connect your wallet and trigger the bid.</li>
+                        <li>&#8226; Enjoy your item!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      
+<!-- Gradient Line -->
+<hr style="background-color: #1c1c1c; height: 2px; width: 85%;">
+
+    <div class="img-container">
+
+        <div class="image-button-container">
+           
+            <div class="bid-box">
+                <!-- Elements to display bid amount, user balance, and response -->
+                <p id="bid-amount">Bid Amount: 0.5 ETH</p>
+            </div>
+            <div style="padding: 10px;"></div>
+            <img src="{% static 'img/sofa_1.png' %}" alt="Sofa Image" class="img-fluid" style="border: 7px solid transparent; border-image: linear-gradient(to right, #dcdad5, #a7a69d, #dcdad5) 7;">
+            <!-- Button overlay on the image -->
+            <a href="#" class="btn btn-primary overlay-button responsive-button" id="bid-button">Let's bid!</a>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+   
+        <div style="padding: 15px;"></div>
+            <footer>
+                <div class="container">
+                    <p>&copy; 2023 <a href="https://julianfalexander.dev" target="_blank" style="color: white;">julianfalexander.dev</a></p>
+                </div>
+            </footer>
+    
+    <!--  JavaScript scripts -->
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+    </script>
+    </body>
+</html>
+
+
